@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_oposition"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.9"
+            android:background="@color/blue"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center"
+                android:src="@drawable/icon"
+                android:scaleType="fitXY"
+                android:layout_width="102dp"
+                android:layout_height="102dp" />
+
+            <TextView
+
+                android:layout_marginTop="21dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SELECT PARAMETERS"
+                android:gravity="center"
+                android:textSize="16sp"
+                style="?android:attr/textAppearanceSmall"
+                android:textStyle="bold"
+                android:padding="2dp"
+                android:layout_marginStart="15dp"
+                android:layout_gravity="bottom"
+                android:textColor="@android:color/white"
+                android:id="@+id/header_tv"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.4"
+            android:orientation="horizontal">
+
+         <ScrollView
+             android:layout_width="match_parent"
+             android:layout_height="match_parent">
+
+               <LinearLayout
+                   android:orientation="vertical"
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent">
+
+
+                   <android.support.v7.widget.CardView
+                       app:cardElevation="15dp"
+                       android:backgroundTint="@color/cardtint"
+                       android:layout_margin="15dp"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content">
+
+
+                      <LinearLayout
+                          android:layout_margin="15dp"
+                          android:orientation="vertical"
+                          android:layout_width="match_parent"
+                          android:layout_height="match_parent">
+
+                          <TextView
+                              android:layout_width="match_parent"
+                              android:layout_height="wrap_content"
+                              android:layout_marginTop="10dp"
+                              android:layout_marginBottom="10dp"
+                              android:textStyle="bold"
+                              android:textColor="@color/blue"
+                              android:textAppearance="?android:attr/textAppearanceSmall"
+                              android:layout_marginLeft="10dp"
+                              android:text="Select Match Type"
+                              />
+
+                          <RadioGroup
+                              android:layout_gravity="center"
+                              android:gravity="center"
+                              android:orientation="vertical"
+                              android:id="@+id/radiogroup_daynight"
+                              android:layout_width="match_parent"
+                              android:layout_height="wrap_content">
+
+                              <RadioButton
+                                  android:textStyle="bold"
+                                  android:layout_gravity="left"
+                              android:id="@+id/radio_day"
+                              android:checked="true"
+                              android:text="Day"
+                              android:layout_width="wrap_content"
+                              android:layout_height="wrap_content" />
+
+                              <RadioButton
+                                  android:layout_gravity="start"
+                                  android:textStyle="bold"
+                                  android:id="@+id/radio_night"
+                                  android:checked="false"
+                                  android:text="Night"
+                                  android:layout_width="wrap_content"
+                                  android:layout_height="wrap_content" />
+
+
+                          </RadioGroup>
+
+
+                      </LinearLayout>
+
+                   </android.support.v7.widget.CardView>
+
+                   <!--Toss Status-->
+
+
+                   <android.support.v7.widget.CardView
+
+                       android:layout_margin="15dp"
+                       app:cardElevation="15dp"
+                       android:backgroundTint="@color/cardtint"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content">
+
+
+                       <LinearLayout
+                           android:layout_margin="15dp"
+                           android:orientation="vertical"
+                           android:layout_width="match_parent"
+                           android:layout_height="match_parent">
+
+                           <TextView
+                               android:layout_width="match_parent"
+                               android:layout_height="wrap_content"
+                               android:layout_marginTop="10dp"
+                               android:layout_marginBottom="10dp"
+                               android:textStyle="bold"
+                               android:textColor="@color/blue"
+                               android:textAppearance="?android:attr/textAppearanceSmall"
+                               android:layout_marginLeft="10dp"
+                               android:text="Select Toss Winner"
+                               />
+
+                           <RadioGroup
+                               android:id="@+id/radiogroup_toss"
+                               android:layout_width="match_parent"
+                               android:layout_height="wrap_content">
+
+                               <RadioButton
+                                   android:textStyle="bold"
+                                   android:id="@+id/radio_tosswin"
+                                   android:checked="true"
+                                   android:text="India Wins Toss"
+                                   android:layout_width="wrap_content"
+                                   android:layout_height="wrap_content" />
+
+                               <RadioButton
+                                   android:textStyle="bold"
+                                   android:id="@+id/radio_tossloss"
+                                   android:checked="false"
+                                   android:text="India Loss Toss"
+                                   android:layout_width="wrap_content"
+                                   android:layout_height="wrap_content" />
+
+
+                           </RadioGroup>
+
+
+                       </LinearLayout>
+
+                   </android.support.v7.widget.CardView>
+
+
+                   <!--Batting First-->
+
+                   <android.support.v7.widget.CardView
+
+                       android:layout_margin="15dp"
+                       app:cardElevation="15dp"
+                       android:backgroundTint="@color/cardtint"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content">
+
+
+                       <LinearLayout
+                           android:layout_margin="15dp"
+                           android:orientation="vertical"
+                           android:layout_width="match_parent"
+                           android:layout_height="match_parent">
+
+                           <TextView
+                               android:layout_width="match_parent"
+                               android:layout_height="wrap_content"
+                               android:layout_marginTop="10dp"
+                               android:layout_marginBottom="10dp"
+                               android:textStyle="bold"
+                               android:textColor="@color/blue"
+                               android:textAppearance="?android:attr/textAppearanceSmall"
+                               android:layout_marginLeft="10dp"
+                               android:text="Will India Bat First"
+                               />
+
+                           <RadioGroup
+                               android:id="@+id/radiogroup_batfirst"
+                               android:layout_width="match_parent"
+                               android:layout_height="wrap_content">
+
+                               <RadioButton
+                                   android:textStyle="bold"
+                                   android:id="@+id/radio_batfirst"
+                                   android:checked="true"
+                                   android:text="Yes,India BAT first"
+                                   android:layout_width="wrap_content"
+                                   android:layout_height="wrap_content" />
+
+                               <RadioButton
+                                   android:textStyle="bold"
+                                   android:id="@+id/radio_bowlfirst"
+                                   android:checked="false"
+                                   android:text="No,India Bowl First"
+                                   android:layout_width="wrap_content"
+                                   android:layout_height="wrap_content" />
+
+
+                           </RadioGroup>
+
+
+                       </LinearLayout>
+
+                   </android.support.v7.widget.CardView>
+
+
+
+                   <!--Pitch Contiions-->
+
+
+                   <android.support.v7.widget.CardView
+
+                       android:layout_margin="15dp"
+                       app:cardElevation="15dp"
+                       android:backgroundTint="@color/cardtint"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content">
+
+
+                       <LinearLayout
+                           android:layout_margin="15dp"
+                           android:orientation="vertical"
+                           android:layout_width="match_parent"
+                           android:layout_height="match_parent">
+
+                           <TextView
+                               android:layout_width="match_parent"
+                               android:layout_height="wrap_content"
+                               android:layout_marginTop="10dp"
+                               android:layout_marginBottom="10dp"
+                               android:textStyle="bold"
+                               android:textColor="@color/blue"
+                               android:textAppearance="?android:attr/textAppearanceSmall"
+                               android:layout_marginLeft="10dp"
+                               android:text="Select Pitch Condition"
+                               />
+
+                           <RadioGroup
+                               android:id="@+id/radiogroup_pitch"
+                               android:layout_width="match_parent"
+                               android:layout_height="wrap_content">
+
+                               <RadioButton
+                                   android:textStyle="bold"
+                                   android:id="@+id/radio_dry"
+                                   android:checked="true"
+                                   android:text="Dry Pitch"
+                                   android:layout_width="wrap_content"
+                                   android:layout_height="wrap_content" />
+
+                               <RadioButton
+                                   android:textStyle="bold"
+                                   android:id="@+id/radio_wet"
+                                   android:checked="false"
+                                   android:text="Wet Pitch"
+                                   android:layout_width="wrap_content"
+                                   android:layout_height="wrap_content" />
+
+                               <RadioButton
+                                   android:textStyle="bold"
+                                   android:id="@+id/radio_greenPitch"
+                                   android:checked="false"
+                                   android:text="Green Pitch"
+                                   android:layout_width="wrap_content"
+                                   android:layout_height="wrap_content" />
+
+                               <RadioButton
+                                   android:textStyle="bold"
+                                   android:id="@+id/radio_NormalPitch"
+                                   android:checked="false"
+                                   android:text="Normal Pitch"
+                                   android:layout_width="wrap_content"
+                                   android:layout_height="wrap_content" />
+
+
+                           </RadioGroup>
+
+
+                       </LinearLayout>
+
+                   </android.support.v7.widget.CardView>
+
+
+
+
+
+
+               </LinearLayout>
+
+
+         </ScrollView>
+
+         </LinearLayout>
+
+    </LinearLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:clickable="true"
+        android:src="@android:drawable/ic_media_play"
+        app:backgroundTint="@color/colorAccent"
+        app:layout_anchor="@id/header"
+        app:layout_anchorGravity="bottom|right|end"/>
+
+
+
+</android.support.design.widget.CoordinatorLayout>

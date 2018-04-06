@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.saproductions.cricket_prediction_mait.Activity.MainActivity">
+
+<android.support.design.widget.AppBarLayout
+    android:layout_width="match_parent"
+    android:layout_height="?android:attr/actionBarSize">
+
+<android.support.v7.widget.Toolbar
+    android:background="@color/colorPrimary"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageButton
+            android:layout_width="0dp"
+            android:backgroundTint="@android:color/transparent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.20"
+            android:scaleType="fitXY"
+            android:src="@drawable/opposition"
+
+            />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.9"
+            android:textColor="#ffffff"
+            android:text="CRICKET PREDICTION"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            />
+
+    </LinearLayout>
+
+</android.support.v7.widget.Toolbar>
+
+</android.support.design.widget.AppBarLayout>
+
+<android.support.v4.widget.NestedScrollView
+    android:layout_width="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    android:layout_height="match_parent">
+
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="?android:attr/textAppearanceMedium"
+        android:text="PREDICTING THE OUTCOME OF CRICKET MATCH USING MACHINE LEARNING"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_gravity="center"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_margin="25dp"
+        />
+
+    <ImageButton
+        android:id="@+id/imagebutton_play"
+        android:layout_width="170dp"
+        android:scaleType="fitXY"
+        android:layout_marginTop="35dp"
+        android:layout_height="170dp"
+        android:src="@drawable/play"
+        android:layout_gravity="center"
+        android:layout_marginBottom="30dp"
+        android:backgroundTint="@android:color/transparent"
+        />
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="?android:attr/textAppearanceMedium"
+        android:text="POWERED BY HOWSTATS"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_gravity="bottom"
+        android:gravity="center"
+        android:layout_margin="25dp"
+        android:textStyle="italic"
+        />
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="?android:attr/textAppearanceSmall"
+        android:text="-SHIVAM ARORA \t SUDHANSHU CHOPRA \t SHUBHAM AGGRAWAL \n \n MENTOR: DR. POOJA GUPTA"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_gravity="bottom"
+        android:gravity="bottom"
+        android:layout_margin="25dp"
+        />
+
+
+</LinearLayout>
+
+
+</android.support.v4.widget.NestedScrollView>
+
+
+
+
+</android.support.design.widget.CoordinatorLayout>
