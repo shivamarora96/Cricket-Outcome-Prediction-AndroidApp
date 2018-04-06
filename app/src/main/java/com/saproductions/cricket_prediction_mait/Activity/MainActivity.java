@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(), "KINDLY CHECK YOUR CONNECTIVITY !!", Toast.LENGTH_LONG).show();
                 }
                 else{
-                    Toast.makeText(getApplicationContext(), "Kindly Fillup  the Data", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(), "Kindly Fillup  the Data", Toast.LENGTH_SHORT).show();
                     startActivity(new Intent(MainActivity.this, Opposition.class));
                     MainActivity.this.finish();
                 }

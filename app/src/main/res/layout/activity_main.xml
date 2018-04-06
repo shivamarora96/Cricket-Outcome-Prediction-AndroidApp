@@ -51,75 +51,72 @@
 
 </android.support.design.widget.AppBarLayout>
 
-<android.support.v4.widget.NestedScrollView
-    android:layout_width="match_parent"
-    app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    android:layout_height="match_parent">
+    <!--<android.support.v4.widget.NestedScrollView-->
+        <!--android:background="@drawable/main1"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent">-->
 
-<LinearLayout
-    android:orientation="vertical"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-
-    <TextView
+    <RelativeLayout
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        style="?android:attr/textAppearanceMedium"
-        android:text="PREDICTING THE OUTCOME OF CRICKET MATCH USING MACHINE LEARNING"
-        android:textColor="@color/colorPrimaryDark"
-        android:layout_gravity="center"
-        android:textStyle="bold"
-        android:gravity="center"
-        android:layout_margin="25dp"
-        />
+        android:layout_height="match_parent">
 
-    <ImageButton
-        android:id="@+id/imagebutton_play"
-        android:layout_width="170dp"
-        android:scaleType="fitXY"
-        android:layout_marginTop="35dp"
-        android:layout_height="170dp"
-        android:src="@drawable/play"
-        android:layout_gravity="center"
-        android:layout_marginBottom="30dp"
-        android:backgroundTint="@android:color/transparent"
-        />
+        <ImageView
+            android:alpha="0.5"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/main"
+            android:scaleType="centerCrop"
+            />
 
 
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        style="?android:attr/textAppearanceMedium"
-        android:text="POWERED BY HOWSTATS"
-        android:textColor="@color/colorPrimaryDark"
-        android:layout_gravity="bottom"
-        android:gravity="center"
-        android:layout_margin="25dp"
-        android:textStyle="italic"
-        />
-
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="?android:attr/textAppearanceMedium"
+            android:text="PREDICTING THE OUTCOME OF CRICKET MATCH USING MACHINE LEARNING"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_gravity="center"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_margin="25dp"
+            android:id="@+id/textView4" />
 
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        style="?android:attr/textAppearanceSmall"
-        android:text="-SHIVAM ARORA \t SUDHANSHU CHOPRA \t SHUBHAM AGGRAWAL \n \n MENTOR: DR. POOJA GUPTA"
-        android:textColor="@color/colorPrimaryDark"
-        android:layout_gravity="bottom"
-        android:gravity="bottom"
-        android:layout_margin="25dp"
-        />
+        <ImageButton
+            android:id="@+id/imagebutton_play"
+            android:layout_width="170dp"
+            android:scaleType="fitXY"
+            android:layout_height="170dp"
+            android:src="@drawable/play"
+            android:layout_gravity="center"
+            android:backgroundTint="@android:color/transparent"
+            android:layout_below="@+id/textView4"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="39dp" />
 
 
-</LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="?android:attr/textAppearanceSmall"
+            android:text="-SHIVAM ARORA \t SUDHANSHU CHOPRA \t SHUBHAM AGGRAWAL \n \n MENTOR: DR. POOJA GUPTA"
+            android:textColor="@color/colorPrimaryDark"
+            android:textStyle="bold"
+            android:layout_gravity="bottom"
+            android:gravity="bottom"
+            android:id="@+id/textView3"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginBottom="29dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true" />
 
 
-</android.support.v4.widget.NestedScrollView>
+    </RelativeLayout>
 
 
+    <!--</android.support.v4.widget.NestedScrollView>-->
 
 
 </android.support.design.widget.CoordinatorLayout>
