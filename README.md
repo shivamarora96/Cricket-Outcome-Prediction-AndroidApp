@@ -1,5 +1,5 @@
 # Cricket-Outcome-Prediction-AndroidApp
-![ss1](/../master/picsandapk/2.png?raw=true)
+![ss1](/../master/picsandapk/2.png?raw=true=250*250)
 <br/>
 ![ss1](/../master/picsandapk/3.png?raw=true)
 <br/>
