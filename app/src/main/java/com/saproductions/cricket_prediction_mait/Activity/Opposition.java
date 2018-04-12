@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.support.v7.widget.CardView;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.Toast;
@@ -24,12 +25,11 @@ public class Opposition extends AppCompatActivity {
     ListView listView;
     ArrayList<String> data = new ArrayList<>();
     CustomAdapter customAdapter ;
-    CardView child;
     String opposition = " " ;
     FloatingActionButton fab;
+    int logo = R.drawable.logo1;
     SharedPreferenceManager sp;
-
-    int prevPosition = -1;
+    ImageView headerImageView;
 
 
     @Override
@@ -37,30 +37,25 @@ public class Opposition extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_oposition);
 
+        headerImageView = (ImageView)findViewById(R.id.headerImageView);
         listView = (ListView)findViewById(R.id.listview);
         fillData(data);
         sp = new SharedPreferenceManager(getApplicationContext());
 
         fab = (FloatingActionButton)findViewById(R.id.fab);
+        headerImageView.setImageResource(logo);
 
-        customAdapter = new CustomAdapter(Opposition.this, data);
+        customAdapter = new CustomAdapter(Opposition.this, data, Constants.KEY_ADD_LOGO);
         listView.setAdapter(customAdapter);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
-//                if(prevPosition!=-1){
-//                    View v =    listView.getAdapter().getView(prevPosition,null,listView);
-//                    LinearLayout ll  = (LinearLayout)v.findViewById(R.id.child_ll);
-//                    ll.setBackgroundColor(Color.TRANSPARENT);
-//
-//                }
-//                LinearLayout childe_ll  = (LinearLayout)view.findViewById(R.id.child_ll);
-//                childe_ll.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
                 opposition = data.get(position);
-//                prevPosition = position;
-
-                Toast.makeText(getApplicationContext(), opposition + " Selected" , Toast.LENGTH_SHORT).show();
+                logo = Constants.LOGO[position];
+                headerImageView.setImageResource(logo);
+                headerImageView.setScaleType(ImageView.ScaleType.FIT_XY);
+                Toast.makeText(getApplicationContext(), opposition + " Selected !! " , Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -79,6 +74,7 @@ public class Opposition extends AppCompatActivity {
 
                     //Added to shared Pref
                     sp.setString(Constants.KEY_OPPOSITIONTEAM, opposition);
+                    sp.setInt(Constants.KEY_LOGO, logo);
 
                     startActivity(new Intent(Opposition.this, Country.class));
                     Opposition.this.finish();

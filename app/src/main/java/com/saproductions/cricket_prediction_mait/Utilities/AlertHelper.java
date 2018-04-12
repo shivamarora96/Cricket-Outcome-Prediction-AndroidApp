@@ -2,11 +2,12 @@ package com.saproductions.cricket_prediction_mait.Utilities;
 
 import android.content.Context;
 import android.graphics.Color;
+import android.os.Handler;
 
 import cn.pedant.SweetAlert.SweetAlertDialog;
 
 
-public class AlertHelper {
+public class AlertHelper implements Runnable {
 
 private SweetAlertDialog sweetAlertDialog;
 
@@ -58,6 +59,14 @@ private SweetAlertDialog sweetAlertDialog;
         }
     }
 
+    public void showDemoAlert(long millisec){
+        showAlert();
+        new Handler().postDelayed(this, millisec);
+    }
 
 
+    @Override
+    public void run() {
+        hideAlert();
+    }
 }

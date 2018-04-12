@@ -5,6 +5,7 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.CardView;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
@@ -16,6 +17,11 @@ import com.saproductions.cricket_prediction_mait.R;
 import com.saproductions.cricket_prediction_mait.Utilities.SharedPreferenceManager;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Set;
+
+import static com.saproductions.cricket_prediction_mait.Others.Constants.VENUE;
 
 public class Country extends AppCompatActivity {
 
@@ -26,7 +32,6 @@ public class Country extends AppCompatActivity {
     String currentData = " ";
     FloatingActionButton fab;
     SharedPreferenceManager sp;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,7 +44,7 @@ public class Country extends AppCompatActivity {
 
         fillData(data);
 
-        customAdapter = new CustomAdapter(Country.this, data);
+        customAdapter = new CustomAdapter(Country.this, data, Constants.KEY_ADD_CUSTOM_IMAGE);
         listView.setAdapter(customAdapter);
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -85,8 +90,9 @@ public class Country extends AppCompatActivity {
     //TODO fill data
     public void fillData(ArrayList<String> data){
 
-        for(int i = 0 ; i<10 ; i++){
-            data.add("Country " + i+1);
-        }
+        HashMap<String,String[]> temp = Constants.VENUE;
+        Set<String> set = temp.keySet();
+        data.addAll(set);
+
     }
 }

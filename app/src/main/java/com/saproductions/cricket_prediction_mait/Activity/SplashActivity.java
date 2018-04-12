@@ -5,6 +5,7 @@ import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import com.saproductions.cricket_prediction_mait.Others.Constants;
 import com.saproductions.cricket_prediction_mait.R;
 import com.saproductions.cricket_prediction_mait.Utilities.SharedPreferenceManager;
 
@@ -22,8 +23,7 @@ public class SplashActivity extends AppCompatActivity implements Runnable {
         sharedPreferenceManager.clearValues();
 
         //TODO dowload data about venue and stadiums
-
-
+        Constants.fillData(Constants.VENUE);
 
         new Handler().postDelayed(SplashActivity.this ,TIME_DELAY);
 

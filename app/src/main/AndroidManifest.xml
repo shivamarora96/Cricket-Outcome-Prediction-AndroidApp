@@ -16,7 +16,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:replace="android:icon">
-        <activity android:name=".Activity.SplashActivity">
+
+        <activity android:name=".Activity.SplashActivity"
+            android:screenOrientation="portrait">
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,15 +26,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
 
-        </activity>
-        <activity android:name=".Activity.MainActivity" />
-        <activity android:name=".Activity.Opposition" />
-        <activity android:name=".Activity.Country" />
-        <activity android:name=".Activity.Stadium" />
-        <activity android:name=".Activity.Params" >
 
-            </activity>
-        <activity android:name=".Activity.Result"></activity>
+        </activity>
+        <activity android:name=".Activity.MainActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".Activity.Opposition" android:screenOrientation="portrait"/>
+        <activity android:name=".Activity.Country" android:screenOrientation="portrait"/>
+        <activity android:name=".Activity.Stadium" android:screenOrientation="portrait"/>
+        <activity android:name=".Activity.Params" android:screenOrientation="portrait" />
+        <activity android:name=".Activity.Result" android:screenOrientation="portrait"/>
     </application>
 
 </manifest>

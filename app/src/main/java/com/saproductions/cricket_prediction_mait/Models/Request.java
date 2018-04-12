@@ -7,10 +7,19 @@ package com.saproductions.cricket_prediction_mait.Models;
 public class Request {
 
     int mBatFirst;
+    int mLogo;
     int mMatchType;
     String mStadiumVenue;
     String mCountryVenue;
     String mOppositionTeam;
+
+    public int getmLogo() {
+        return mLogo;
+    }
+
+    public void setmLogo(int mLogo) {
+        this.mLogo = mLogo;
+    }
 
     public Request(int mBatFirst, int mMatchType, String mStadiumVenue, String mCountryVenue, String mOppositionTeam) {
         this.mBatFirst = mBatFirst;

@@ -40,7 +40,7 @@ public class Stadium extends AppCompatActivity {
 
         fillData(data);
 
-        customAdapter = new CustomAdapter(Stadium.this, data);
+        customAdapter = new CustomAdapter(Stadium.this, data, Constants.KEY_ADD_DEFAULT_IMAGE);
         listView.setAdapter(customAdapter);
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -86,9 +86,12 @@ public class Stadium extends AppCompatActivity {
     //TODO fill data
     public void fillData(ArrayList<String> data){
 
-        for(int i = 0 ; i<10 ; i++){
-            data.add("Stadium " + i+1);
-        }
+        String country = sp.getString(Constants.KEY_COUNTRYVENUE, "India");
+        String[] venues  =  Constants.VENUE.get(country);
+
+        for(int i = 0 ; i<venues.length ; i++)
+            data.add(venues[i]);
+
     }
 }
 

@@ -5,6 +5,17 @@ package com.saproductions.cricket_prediction_mait.Models;
  */
 
 public class Response {
+
+    int result;
+
     public Response() {
+    }
+
+    public int getResult() {
+        return result;
+    }
+
+    public void setResult(int result) {
+        this.result = result;
     }
 }

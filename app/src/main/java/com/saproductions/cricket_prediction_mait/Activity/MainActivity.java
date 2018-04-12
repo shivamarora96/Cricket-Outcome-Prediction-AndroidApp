@@ -11,6 +11,7 @@ import android.widget.ImageButton;
 import android.widget.Toast;
 
 import com.saproductions.cricket_prediction_mait.R;
+import com.saproductions.cricket_prediction_mait.Utilities.Network.NetworkHelper;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -28,7 +29,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                if(!isOnline()){
+
+                if(!NetworkHelper.isNetworkAvailable(MainActivity.this)){
                     Toast.makeText(getApplicationContext(), "KINDLY CHECK YOUR CONNECTIVITY !!", Toast.LENGTH_LONG).show();
                 }
                 else{
@@ -42,16 +44,5 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
-
-
-    protected boolean isOnline() {
-        ConnectivityManager cm = (ConnectivityManager)getSystemService(Context.CONNECTIVITY_SERVICE);
-        NetworkInfo netInfo = cm.getActiveNetworkInfo();
-        return netInfo != null && netInfo.isConnectedOrConnecting();
-    }
-
-
-
-
 
 }

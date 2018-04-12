@@ -25,6 +25,7 @@
 
 
         <ImageView
+            android:id="@+id/child_imageView"
             android:src="@drawable/select"
             android:scaleType="fitXY"
             android:layout_width="65dp"
